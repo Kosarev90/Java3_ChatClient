@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.titov.client.controllers.ClientController">
+   <center>
+      <TextArea fx:id="textArea" editable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox prefHeight="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="textField" maxHeight="1.7976931348623157E308" onAction="#sendMessage" HBox.hgrow="ALWAYS" />
+            <Button fx:id="sendButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#sendMessage" text="Отправить" />
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <ListView fx:id="userList" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <top>
+      <HBox prefHeight="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#closeChat" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#changeUserName" text="Изменить имя" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label alignment="CENTER" prefHeight="25.0" prefWidth="471.0" text="Онлайн чат GeekBrains">
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
