@@ -55,6 +55,7 @@ public class AuthController {
         return network.isConnected() || network.connect();
     }
 
+
     public void initializeMessageHandler() {
         readMessageListener = getNetwork().addReadMessageListener(new ReadCommandListener() {
             @Override
