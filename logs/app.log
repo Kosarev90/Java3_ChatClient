@@ -1,0 +1,20 @@
+2022-02-17 13:32:48.401 [main] INFO  ru.titov.server.chat.MyServer - Server has been started
+2022-02-17 13:32:48.443 [main] INFO  ru.titov.server.chat.auth.PersistentDbAuthService - Creating DB connection...
+2022-02-17 13:32:48.918 [main] INFO  ru.titov.server.chat.auth.PersistentDbAuthService - DB connection is created successfully
+2022-02-17 13:32:48.926 [main] INFO  ru.titov.server.chat.MyServer - Waiting for new client connection
+2022-02-17 13:54:42.789 [main] INFO  ru.titov.server.chat.MyServer - Server has been started
+2022-02-17 13:54:42.811 [main] INFO  ru.titov.server.chat.auth.PersistentDbAuthService - Creating DB connection...
+2022-02-17 13:54:43.231 [main] INFO  ru.titov.server.chat.auth.PersistentDbAuthService - DB connection is created successfully
+2022-02-17 13:54:43.237 [main] INFO  ru.titov.server.chat.MyServer - Waiting for new client connection
+2022-02-17 14:02:02.588 [main] INFO  ru.titov.server.chat.MyServer - Server has been started
+2022-02-17 14:02:02.595 [main] INFO  ru.titov.server.chat.auth.PersistentDbAuthService - Creating DB connection...
+2022-02-17 14:02:02.999 [main] INFO  ru.titov.server.chat.auth.PersistentDbAuthService - DB connection is created successfully
+2022-02-17 14:02:03.006 [main] INFO  ru.titov.server.chat.MyServer - Waiting for new client connection
+2022-02-17 14:18:18.660 [main] INFO  ru.titov.server.chat.MyServer - Server has been started
+2022-02-17 14:18:18.670 [main] INFO  ru.titov.server.chat.auth.PersistentDbAuthService - Creating DB connection...
+2022-02-17 14:18:19.188 [main] INFO  ru.titov.server.chat.auth.PersistentDbAuthService - DB connection is created successfully
+2022-02-17 14:18:19.193 [main] INFO  ru.titov.server.chat.MyServer - Waiting for new client connection
+2022-02-17 14:43:57.313 [main] INFO  ru.titov.server.chat.MyServer - Server has been started
+2022-02-17 14:43:57.320 [main] INFO  ru.titov.server.chat.auth.PersistentDbAuthService - Creating DB connection...
+2022-02-17 14:43:57.872 [main] INFO  ru.titov.server.chat.auth.PersistentDbAuthService - DB connection is created successfully
+2022-02-17 14:43:57.878 [main] INFO  ru.titov.server.chat.MyServer - Waiting for new client connection

@@ -1,5 +1,7 @@
 package ru.titov.server.chat;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.titov.clientserver.Command;
 import ru.titov.clientserver.CommandType;
 import ru.titov.clientserver.commands.AuthCommandData;
@@ -19,6 +21,8 @@ public class ClientHandler {
     private ObjectInputStream inputStream;
     private ObjectOutputStream outputStream;
     private String userName;
+    private final static Logger LOGGER = LogManager.getLogger(ClientHandler.class);
+
 
     public ClientHandler(MyServer server, Socket clientSocket) {
         this.server = server;
@@ -34,13 +38,13 @@ public class ClientHandler {
                 authenticate();
                 readMessages();
             } catch (IOException e) {
-                System.err.println("Failed to process message from client");
+                LOGGER.error("Failed to process message from client");
                 e.printStackTrace();
             } finally {
                 try {
                     closeConnection();
                 } catch (IOException e) {
-                    System.err.println("Failed to close connection");
+                    LOGGER.error("Failed to close connection");
                 }
             }
         }).start();
@@ -78,7 +82,7 @@ public class ClientHandler {
         try {
             command = (Command) inputStream.readObject();
         } catch (ClassNotFoundException e) {
-            System.err.println("Failed to read Command class");
+            LOGGER.error("Failed to read Command class");
             e.printStackTrace();
         }
 

@@ -5,6 +5,8 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.titov.client.ClientChat;
 import ru.titov.client.dialogs.Dialogs;
 import ru.titov.client.model.Network;
@@ -26,6 +28,8 @@ public class ClientController {
     @FXML private TextField textField;
     @FXML private Button sendButton;
     @FXML public ListView<String> userList;
+
+    private final static Logger LOGGER2 = LogManager.getLogger(ClientController.class);
 
 
     private ClientChat application;
@@ -53,7 +57,7 @@ public class ClientController {
             if (sender != null) {
                 Network.getInstance().sendPrivateMessage(sender, message);
             } else {
-                System.out.println("ClientController Network.getInstance().sendMessage(message);");
+                LOGGER2.info("ClientController Network.getInstance().sendMessage(message);");
                 Network.getInstance().sendMessage(message);
             }
 
